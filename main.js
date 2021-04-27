@@ -2,9 +2,11 @@
 // CC Final Project
 // Bowen Gong bg1941
 
+
 const dimention = 3;
 cube = [];  // array that stores all the small cubes 
 let cam;    // the camera
+const colors = ['#FFFFFF', '#FFFF00','#FFA500','#FF0000','#00FF00','#0000FF'];  // the colors of the six sides, top,bottom,right,left,front,back
 
 function setup() {
   createCanvas(600, 600, WEBGL);//.elt.oncontextmenu = () => false;
@@ -28,7 +30,6 @@ function setup() {
 
 function draw() {
   background(100);
-
   for (let i = 0; i < dimention; i++) {
     for (let j = 0; j < dimention; j++) {
       for (let w = 0; w < dimention; w++) {

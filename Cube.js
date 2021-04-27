@@ -13,7 +13,9 @@ class Cube{  // the small cubes
 		translate(this.pos.x,this.pos.y,this.pos.z);
 		//box(this.len);
 		const r = this.len / 2;
+		
 		beginShape();
+    fill(colors[0]);
     vertex(-r, -r, -r);
     vertex(r, -r, -r);
     vertex(r, r, -r);
@@ -21,14 +23,15 @@ class Cube{  // the small cubes
     endShape(CLOSE);
 
     beginShape();
+    fill(colors[1]);
     vertex(-r, -r, r);
     vertex(r, -r, r);
     vertex(r, r, r);
     vertex(-r, r, r);
     endShape(CLOSE);
 
-    // y-fixed
     beginShape();
+    fill(colors[2]);
     vertex(-r, -r, -r);
     vertex(r, -r, -r);
     vertex(r, -r, r);
@@ -36,14 +39,15 @@ class Cube{  // the small cubes
     endShape(CLOSE);
 
     beginShape();
+    fill(colors[3]);
     vertex(-r, r, -r);
     vertex(r, r, -r);
     vertex(r, r, r);
     vertex(-r, r, r);
     endShape(CLOSE);
 
-    // x-fixed
     beginShape();
+    fill(colors[4]);
     vertex(-r, -r, -r);
     vertex(-r, r, -r);
     vertex(-r, r, r);
@@ -51,6 +55,7 @@ class Cube{  // the small cubes
     endShape(CLOSE);
 
     beginShape();
+    fill(colors[5]);
     vertex(r, -r, -r);
     vertex(r, r, -r);
     vertex(r, r, r);
