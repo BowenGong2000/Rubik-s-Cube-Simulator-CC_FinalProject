@@ -2,16 +2,15 @@
 // CC Final Project
 // Bowen Gong bg1941
 
-
 const dimention = 3;
 cube = [];  // array that stores all the small cubes 
 let cam;    // the camera
 
 function setup() {
-	createCanvas(600, 600, WEBGL); //.elt.oncontextmenu = () => false;
-	cam = createEasyCam({ distance: 350 });
-	
-	for (let i = 0; i < dimention; i++) {
+  createCanvas(600, 600, WEBGL);//.elt.oncontextmenu = () => false;
+  cam = createEasyCam({ distance: 370 });
+  
+  for (let i = 0; i < dimention; i++) {
     cube[i] = [];
     for (let j = 0; j < dimention; j++) {
       cube[i][j] = [];
@@ -28,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-	background(200);
+  background(100);
 
   for (let i = 0; i < dimention; i++) {
     for (let j = 0; j < dimention; j++) {

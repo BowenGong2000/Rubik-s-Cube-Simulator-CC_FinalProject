@@ -11,7 +11,51 @@ class Cube{  // the small cubes
 		
 		push();
 		translate(this.pos.x,this.pos.y,this.pos.z);
-		box(this.len);
+		//box(this.len);
+		const r = this.len / 2;
+		beginShape();
+    vertex(-r, -r, -r);
+    vertex(r, -r, -r);
+    vertex(r, r, -r);
+    vertex(-r, r, -r);
+    endShape(CLOSE);
+
+    beginShape();
+    vertex(-r, -r, r);
+    vertex(r, -r, r);
+    vertex(r, r, r);
+    vertex(-r, r, r);
+    endShape(CLOSE);
+
+    // y-fixed
+    beginShape();
+    vertex(-r, -r, -r);
+    vertex(r, -r, -r);
+    vertex(r, -r, r);
+    vertex(-r, -r, r);
+    endShape(CLOSE);
+
+    beginShape();
+    vertex(-r, r, -r);
+    vertex(r, r, -r);
+    vertex(r, r, r);
+    vertex(-r, r, r);
+    endShape(CLOSE);
+
+    // x-fixed
+    beginShape();
+    vertex(-r, -r, -r);
+    vertex(-r, r, -r);
+    vertex(-r, r, r);
+    vertex(-r, -r, r);
+    endShape(CLOSE);
+
+    beginShape();
+    vertex(r, -r, -r);
+    vertex(r, r, -r);
+    vertex(r, r, r);
+    vertex(r, -r, r);
+    endShape(CLOSE);
 		
 		pop();
 	}
