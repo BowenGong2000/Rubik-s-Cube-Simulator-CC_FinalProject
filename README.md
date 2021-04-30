@@ -1,8 +1,9 @@
 # Rubik-s-Cube-Simulator-CC_FinalProject
-a new idea for the CC Final Project
+Bowen's CC Final Project
 
 References: 
-Daniel Shiffman, The Coding Train 18.1-18.6. 
+
+Daniel Shiffman, The Coding Train 18.1, 18.2, 18.5, 18.6. 
 https://www.youtube.com/watch?v=nqiKWXUX-o8&ab_channel=TheCodingTrain
 
 Stalgia Grigg, Getting started with WebGL in p5. 
