@@ -17,6 +17,7 @@ function turnZ(){
 		a = orders[i].a;
 		b = orders[i].b;
 		configs[i] = cube[a][b][2].config.copy(); // change the color
+		configs[i].rotateZ();
 	}
 	
 	for (let i =0; i <orders.length; i++){

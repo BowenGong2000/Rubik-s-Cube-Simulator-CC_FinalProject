@@ -8,14 +8,14 @@ cube = [];  // array that stores all the small cubes
 let cam;    // the camera
 
 
-const colors = ['#FFFFFF', '#FFFF00','#FFA500','#FF0000','#0000FF','#00FF00'];  // the colors of the six sides, top,bottom,right,left,front,back(blue)
+const colors = ['#FFFF00','#FFFFFF', '#FFA500','#FF0000','#00FF00','#0000FF', '000000'];  // the colors of the six sides, top,bottom,right,left,front,back(blue)
 // UP, DOWN, RIGHT, LEFT, FRONT, BACK
-const U = 0;
-const D = 1;
-const R = 2;
-const L = 3;
-const F = 4;
-const B = 5;
+const U = 0; // yellow
+const D = 1; // white
+const R = 2; // orange
+const L = 3; // red
+const F = 4; // green 
+const B = 5; // blue
 
 
 function setup() {

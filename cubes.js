@@ -16,23 +16,7 @@ class Cube{  // the small cubes
 		const r = this.len / 2;
 		
 		beginShape();
-    fill(colors[this.config.get_side(U)]); // white
-    vertex(-r, -r, -r);
-    vertex(r, -r, -r);
-    vertex(r, r, -r);
-    vertex(-r, r, -r);
-    endShape(CLOSE);
-
-    beginShape();
-    fill(colors[this.config.get_side(D)]); // yellow
-    vertex(-r, -r, r);
-    vertex(r, -r, r);
-    vertex(r, r, r);
-    vertex(-r, r, r);
-    endShape(CLOSE);
-
-    beginShape();
-    fill(colors[this.config.get_side(R)]); // orange 
+    fill(colors[this.config.get_side(U)]); 
     vertex(-r, -r, -r);
     vertex(r, -r, -r);
     vertex(r, -r, r);
@@ -40,27 +24,43 @@ class Cube{  // the small cubes
     endShape(CLOSE);
 
     beginShape();
-    fill(colors[this.config.get_side(L)]); // red
+    fill(colors[this.config.get_side(D)]); 
     vertex(-r, r, -r);
     vertex(r, r, -r);
     vertex(r, r, r);
     vertex(-r, r, r);
     endShape(CLOSE);
-
-    beginShape();
-    fill(colors[this.config.get_side(F)]); // green 
+		
+		beginShape();
+    fill(colors[this.config.get_side(L)]); 
     vertex(-r, -r, -r);
     vertex(-r, r, -r);
     vertex(-r, r, r);
     vertex(-r, -r, r);
     endShape(CLOSE);
-
+		
     beginShape();
-    fill(colors[this.config.get_side(B)]); // blue 
+    fill(colors[this.config.get_side(R)]); 
     vertex(r, -r, -r);
     vertex(r, r, -r);
     vertex(r, r, r);
     vertex(r, -r, r);
+    endShape(CLOSE);
+		
+		beginShape();
+    fill(colors[this.config.get_side(F)]); 
+    vertex(-r, -r, r);
+    vertex(r, -r, r);
+    vertex(r, r, r);
+    vertex(-r, r, r);
+    endShape(CLOSE);
+		
+		beginShape();
+    fill(colors[this.config.get_side(B)]);  
+    vertex(-r, -r, -r);
+    vertex(r, -r, -r);
+    vertex(r, r, -r);
+    vertex(-r, r, -r);
     endShape(CLOSE);
 		
 		pop();
