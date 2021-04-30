@@ -7,12 +7,22 @@ class Config{ // configuration, color
 		this.sides = sides_;
 	}
 	
-	rotateZ(){
-		var temp = this.sides[U];
-		this.sides[U] = this.sides[R];
-		this.sides[R] = this.sides[D];
-		this.sides[D] = this.sides[L];
-		this.sides[L] = temp;
+	rotateZ(clockw){ // parameter: clockwise, true or false
+		var temp;
+		if (clockw){
+			temp = this.sides[D];
+			this.sides[D] = this.sides[R];
+			this.sides[R] = this.sides[U];
+			this.sides[U] = this.sides[L];
+			this.sides[L] = temp;
+		}
+		else{ // counter clockwise
+			temp = this.sides[U];
+			this.sides[U] = this.sides[R];
+			this.sides[R] = this.sides[D];
+			this.sides[D] = this.sides[L];
+			this.sides[L] = temp;
+		}
 	}
 	
 	get_side(side){ // return a color

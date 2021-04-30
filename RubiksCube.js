@@ -37,13 +37,30 @@ function setup() {
       }
     }
   }
-	turnZ();
+	
+}
+
+function keyPressed(){
+	switch(key){
+		case 'f':
+			turnZ(2,true);
+			break;
+		case 'F':
+			turnZ(2,false);
+			break;
+		case 'b':
+			turnZ(0,true);
+			break;
+		case 'B':
+			turnZ(0,false);
+			break;
+	}
 }
 
 function draw() {
-	rotateX(45);
-	rotateZ(45);
-	background(100);
+	rotateX(-0.35);
+	rotateY(0.4);
+	background(200);
   for (let i = 0; i < dimention; i++) {
     for (let j = 0; j < dimention; j++) {
       for (let w = 0; w < dimention; w++) {
