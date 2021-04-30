@@ -7,6 +7,42 @@ class Config{ // configuration, color
 		this.sides = sides_;
 	}
 	
+	rotateX(clockw){ // parameter: clockwise, true or false
+		var temp;
+		if (clockw){
+			temp = this.sides[B];
+			this.sides[B] = this.sides[D];
+			this.sides[D] = this.sides[F];
+			this.sides[F] = this.sides[U];
+			this.sides[U] = temp;
+		}
+		else{ // counter clockwise
+			temp = this.sides[F];
+			this.sides[F] = this.sides[D];
+			this.sides[D] = this.sides[B];
+			this.sides[B] = this.sides[U];
+			this.sides[U] = temp;
+		}
+	}
+	
+		rotateY(clockw){ // parameter: clockwise, true or false
+		var temp;
+		if (clockw){
+			temp = this.sides[L];
+			this.sides[L] = this.sides[F];
+			this.sides[F] = this.sides[R];
+			this.sides[R] = this.sides[B];
+			this.sides[B] = temp;
+		}
+		else{ // counter clockwise
+			temp = this.sides[L];
+			this.sides[L] = this.sides[B];
+			this.sides[B] = this.sides[R];
+			this.sides[R] = this.sides[F];
+			this.sides[F] = temp;
+		}
+	}
+	
 	rotateZ(clockw){ // parameter: clockwise, true or false
 		var temp;
 		if (clockw){

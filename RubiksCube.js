@@ -42,17 +42,46 @@ function setup() {
 
 function keyPressed(){
 	switch(key){
-		case 'f':
+		// X - axis direction
+		case 'l': // left layer
+			turnX(0,true);
+			break;
+		case 'L':
+			turnX(0,false);
+			break;
+		case 'r': // right layer
+			turnX(2,false);
+			break;
+		case 'R':
+			turnX(2,true);
+			break;
+			
+		// Y - axis direction
+		case 'u': // left layer
+			turnY(0,true);
+			break;
+		case 'U':
+			turnY(0,false);
+			break;
+		case 'd': // right layer
+			turnY(2,true);
+			break;
+		case 'D':
+			turnY(2,false);
+			break;
+			
+		// z - axis direction
+		case 'f': // front layer
 			turnZ(2,true);
 			break;
 		case 'F':
 			turnZ(2,false);
 			break;
-		case 'b':
-			turnZ(0,true);
+		case 'b': // back layer
+			turnZ(0,false);
 			break;
 		case 'B':
-			turnZ(0,false);
+			turnZ(0,true);
 			break;
 	}
 }
