@@ -2,7 +2,6 @@ class Cube{  // the small cubes
 	constructor(x,y,z,length){
 		this.pos = createVector(x,y,z); // position of a single cube 
 		this.len = length;              // its dimention
-		this.config = new Config();
 	}
 	
 	show_cubes(){
@@ -16,7 +15,24 @@ class Cube{  // the small cubes
 		const r = this.len / 2;
 		
 		beginShape();
-    fill(colors[this.config.get_side(U)]); 
+    fill(colors[B]);
+    vertex(-r, -r, -r);
+    vertex(r, -r, -r);
+    vertex(r, r, -r);
+    vertex(-r, r, -r);
+    endShape(CLOSE);
+
+    beginShape();
+    fill(colors[F]);
+    vertex(-r, -r, r);
+    vertex(r, -r, r);
+    vertex(r, r, r);
+    vertex(-r, r, r);
+    endShape(CLOSE);
+
+    // y-fixed
+    beginShape();
+    fill(colors[D]);
     vertex(-r, -r, -r);
     vertex(r, -r, -r);
     vertex(r, -r, r);
@@ -24,43 +40,28 @@ class Cube{  // the small cubes
     endShape(CLOSE);
 
     beginShape();
-    fill(colors[this.config.get_side(D)]); 
+    fill(colors[U]);
     vertex(-r, r, -r);
     vertex(r, r, -r);
     vertex(r, r, r);
     vertex(-r, r, r);
     endShape(CLOSE);
-		
-		beginShape();
-    fill(colors[this.config.get_side(L)]); 
-    vertex(-r, -r, -r);
-    vertex(-r, r, -r);
-    vertex(-r, r, r);
-    vertex(-r, -r, r);
-    endShape(CLOSE);
-		
+
+    // x-fixed
     beginShape();
-    fill(colors[this.config.get_side(R)]); 
-    vertex(r, -r, -r);
-    vertex(r, r, -r);
-    vertex(r, r, r);
-    vertex(r, -r, r);
-    endShape(CLOSE);
-		
-		beginShape();
-    fill(colors[this.config.get_side(F)]); 
-    vertex(-r, -r, r);
-    vertex(r, -r, r);
-    vertex(r, r, r);
-    vertex(-r, r, r);
-    endShape(CLOSE);
-		
-		beginShape();
-    fill(colors[this.config.get_side(B)]);  
+    fill(colors[L]);
     vertex(-r, -r, -r);
+    vertex(-r, r, -r);
+    vertex(-r, r, r);
+    vertex(-r, -r, r);
+    endShape(CLOSE);
+
+    beginShape();
+    fill(colors[R]);
     vertex(r, -r, -r);
     vertex(r, r, -r);
-    vertex(-r, r, -r);
+    vertex(r, r, r);
+    vertex(r, -r, r);
     endShape(CLOSE);
 		
 		pop();
