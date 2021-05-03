@@ -3,9 +3,10 @@ Bowen's CC Final Project
 
 Keys Reminder: 
 
-Turning Left & Right layer: l & r clockwise; L & R counter-clockwise
-Turning Up & Down layer: u & d clockwise; U & D counter-clockwise
-Turning Front & Back layer: f & b clockwise; F & B counter-clockwise
+Rotate, zoom and shrink using mouse. 
+Turning Left & Right layer: l & r clockwise; L & R counter-clockwise. 
+Turning Up & Down layer: u & d clockwise; U & D counter-clockwise. 
+Turning Front & Back layer: f & b clockwise; F & B counter-clockwise. 
 
 References: 
 

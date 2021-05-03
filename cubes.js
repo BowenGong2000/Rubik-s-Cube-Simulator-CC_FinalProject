@@ -1,69 +1,73 @@
-class Cube{  // the small cubes
-	constructor(x,y,z,length){
-		this.pos = createVector(x,y,z); // position of a single cube 
-		this.len = length;              // its dimention
+class Cube {
+
+	constructor(x, y, z, len) {
+		this.pos = createVector(x, y, z); // represent the position of a single cube 
+		this.len = len;                   // length of cube 
+		this.config = new Config();
 	}
-	
-	show_cubes(){
-		fill(255);
+
+	show() {
 		stroke(0);
-		strokeWeight(5);
-		
+		strokeWeight(8);
+        let r = this.len / 2;
 		push();
-		translate(this.pos.x,this.pos.y,this.pos.z);
-		//box(this.len);
-		const r = this.len / 2;
-		
+
+		translate(this.pos.x, this.pos.y, this.pos.z);
+
+        //UP
+        fill(this.config.get('u'));
+        beginShape();
+        vertex(-r, -r, -r);
+        vertex(r, -r, -r);
+        vertex(r, -r, r);
+        vertex(-r, -r, r);
+        endShape(CLOSE);
+
+        //DOWN
+        fill(this.config.get('d'));
+        beginShape();
+        vertex(-r, r, -r);
+        vertex(r, r, -r);
+        vertex(r, r, r);
+        vertex(-r, r, r);
+        endShape(CLOSE);
+
+        //BACK
+		fill(this.config.get('b'));
 		beginShape();
-    fill(colors[B]);
-    vertex(-r, -r, -r);
-    vertex(r, -r, -r);
-    vertex(r, r, -r);
-    vertex(-r, r, -r);
-    endShape(CLOSE);
+		vertex(-r, -r, -r);
+		vertex(r, -r, -r);
+		vertex(r, r, -r);
+		vertex(-r, r, -r);
+        endShape(CLOSE);
 
-    beginShape();
-    fill(colors[F]);
-    vertex(-r, -r, r);
-    vertex(r, -r, r);
-    vertex(r, r, r);
-    vertex(-r, r, r);
-    endShape(CLOSE);
+        //FRONT
+        fill(this.config.get('f'));
+        beginShape();
+        vertex(-r, -r, r);
+        vertex(r, -r, r);
+        vertex(r, r, r);
+        vertex(-r, r, r);
+        endShape(CLOSE);
 
-    // y-fixed
-    beginShape();
-    fill(colors[D]);
-    vertex(-r, -r, -r);
-    vertex(r, -r, -r);
-    vertex(r, -r, r);
-    vertex(-r, -r, r);
-    endShape(CLOSE);
+        //LEFT
+        fill(this.config.get('l'));
+        beginShape();
+        vertex(-r, -r, -r);
+        vertex(-r, r, -r);
+        vertex(-r, r, r);
+        vertex(-r, -r, r);
+        endShape(CLOSE);
 
-    beginShape();
-    fill(colors[U]);
-    vertex(-r, r, -r);
-    vertex(r, r, -r);
-    vertex(r, r, r);
-    vertex(-r, r, r);
-    endShape(CLOSE);
+        //RIGHT
+        fill(this.config.get('r'));
+        beginShape();
+        vertex(r, -r, -r);
+        vertex(r, r, -r);
+        vertex(r, r, r);
+        vertex(r, -r, r);
+        endShape(CLOSE);
 
-    // x-fixed
-    beginShape();
-    fill(colors[L]);
-    vertex(-r, -r, -r);
-    vertex(-r, r, -r);
-    vertex(-r, r, r);
-    vertex(-r, -r, r);
-    endShape(CLOSE);
-
-    beginShape();
-    fill(colors[R]);
-    vertex(r, -r, -r);
-    vertex(r, r, -r);
-    vertex(r, r, r);
-    vertex(r, -r, r);
-    endShape(CLOSE);
-		
 		pop();
 	}
 }
